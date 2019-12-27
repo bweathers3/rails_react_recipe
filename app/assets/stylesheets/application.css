@@ -15,9 +15,20 @@
   color: #FFF;
   border: none;
 }
+.custom-button2.btn {
+  background-color: #1E90FF;
+  color: #FFF;
+  border: none;
+  padding-left: 5px;
+}
 .custom-button.btn:hover {
   color: #FFF !important;
   border: none;
+}
+.divider{
+    width:5px;
+    height:auto;
+    display:inline-block;
 }
 .hero {
   width: 100vw;

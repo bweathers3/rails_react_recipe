@@ -37,6 +37,10 @@ class Recipes extends React.Component {
             <Link to={`/recipe/${recipe.id}`} className="btn custom-button">
               View Recipe
             </Link>
+            <div class="divider"/>
+            <Link to={`/recipe/${recipe.id}`} className="btn custom-button2">
+              Edit Recipe
+            </Link>
           </div>
         </div>
       </div>
