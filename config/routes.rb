@@ -4,10 +4,12 @@ Rails.application.routes.draw do
       get 'recipes/index'
       post 'recipes/create'
       get '/show/:id', to: 'recipes#show'
+      get 'recipes/:id/edit', to: 'recipes#edit'
+      #patch '/show/:id'
       delete '/destroy/:id', to: 'recipes#destroy'
     end
   end
   root 'homepage#index'
   get '/*path' => 'homepage#index'
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+
 end

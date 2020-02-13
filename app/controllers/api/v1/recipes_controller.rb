@@ -21,10 +21,29 @@ class Api::V1::RecipesController < ApplicationController
     end
   end
 
+  def edit
+    if recipe
+      render json: recipe
+    else
+      render json: recipe.errors
+    end
+  end
+
+  def update
+    @recipe = Recipe.find(params[:id])
+
+    if @recipe.update(recipe_params)
+      redirect_to @recipe
+    else
+      render 'edit'
+    end
+  end
+
   def destroy
     recipe&.destroy
     render json: { message: 'Recipe deleted!' }
   end
+
 
   private
 
